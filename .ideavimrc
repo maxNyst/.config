@@ -1,0 +1,95 @@
+Plug 'tpope/vim-surround'
+Plug 'vim-highlightedyank'
+
+syntax on
+
+let mapleader = " "
+
+sethandler <D-h> a:vim
+set nooldundo
+set ignorecase smartcase
+set nu
+set rnu
+set showmode
+set incsearch
+set scrolloff=6
+
+" easy system clipboard copy/paste
+noremap <leader>y "+y
+noremap <leader>Y "+Y
+noremap <leader>p "+p
+noremap <leader>P "+P
+
+" easy window hopping
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+noremap x "_x
+noremap <D-l> $
+noremap <D-h> ^
+" noremap <C-d> <C-d>zz
+" noremap <C-u> <C-u>zz
+noremap <leader>o o<Esc>
+
+noremap <leader>O O<Esc>
+
+inoremap <C-c> <Esc>
+noremap <C-c> <Esc>
+
+
+
+set visualbell 
+set ideajoin
+set ideaput
+set idearefactormode=keep
+
+set highlightedyank
+let g:highlightedyank_highlight_duration = '75'
+let g:highlightedyank_highlight_color = 'rgba(160, 160, 160, 155)'
+
+" maven stuff
+map <leader>mr <Action>(Maven.Reimport)
+
+" ideavim specific
+map <leader>va <Action>(VimFindActionIdAction)
+map <leader>vr <Action>(IdeaVim.ReloadVimRc.reload)
+map <leader>vs :vs ~/.ideavimrc<CR>
+" imap <S-D-CR> <Action>(EditorCompleteStatement)<esc>
+" nmap <S-D-CR> <Action>(EditorCompleteStatement)<esc>
+map <leader>sf <Action>(SelectInProjectView)
+
+" run mappings
+map <leader>r <Action>(Run)
+
+" debugger mappings
+map <leader>d <Action>(Debug)
+map <leader>dr <Action>(Resume)
+map <leader>ds <Action>(StepOver)
+map <leader>di <Action>(StepInto)
+map <leader>do <Action>(StepOut)
+map <leader>mb <Action>(XDebugger.MuteBreakpoints)
+map <leader>b <Action>(ToggleLineBreakpoint)
+
+" git stuff
+map <leader>gb <Action>(Annotate)
+map <leader>mc <Action>(Git.ResolveConflicts)
+
+
+" code stuff
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>rn <Action>(RenameElement)
+map <leader>in <Action>(Inline)
+map gc <Action>(CommentByLineComment)
+map <A-w> [w
+map <A-b> [b
+map <A-e> ]w
+map gd <Action>(GotoDeclaration)
+map gi <Action>(GotoImplementation)
+map gb <Action>(CommentByBlockComment)
+map <leader>ge <Action>(GotoNextError)
+
+" move code up and down NEEDS FIX
+map <D-j> <Action>(MoveStatementDown)
+map <D-k> <Action>(MoveStatementUp)
