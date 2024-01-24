@@ -74,10 +74,12 @@ map <leader>b <Action>(ToggleLineBreakpoint)
 
 " git stuff
 map <leader>gb <Action>(Annotate)
-map <leader>mc <Action>(Git.ResolveConflicts)
+map <leader>gr <Action>(Git.ResolveConflicts)
+map <leader>gc <Action>(Git.ResolveConflicts)
 
 
 " code stuff
+map <leader>dm <Action>(ToggleBookmark)
 map <leader>ca <Action>(ShowIntentionActions)
 map <leader>rn <Action>(RenameElement)
 map <leader>in <Action>(Inline)
@@ -86,7 +88,8 @@ map <A-w> [w
 map <A-b> [b
 map <A-e> ]w
 map gd <Action>(GotoDeclaration)
-map gi <Action>(GotoImplementation)
+map gD <Action>(GotoTypeDeclaration)
+map gI <Action>(GotoImplementation)
 map gb <Action>(CommentByBlockComment)
 map <leader>ge <Action>(GotoNextError)
 
