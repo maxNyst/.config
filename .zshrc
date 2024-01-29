@@ -88,6 +88,7 @@ kubesetup() {
 # aliases
 alias daily="sh $DAILY_PATH"
 alias vi="nvim"
+alias gcof='git checkout $(git branch | fzf)'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(zoxide init zsh)"
