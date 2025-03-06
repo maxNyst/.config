@@ -73,7 +73,7 @@ require('lazy').setup({
 
     'ThePrimeagen/vim-be-good',
   -- Detect tabstop and shiftwidth automatically
-  --  'tpope/vim-sleuth',
+    'tpope/vim-sleuth',
 
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
@@ -196,14 +196,17 @@ require('lazy').setup({
       -- refer to the configuration section below
     }
   },
-
-  { "catppuccin/nvim",
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  {
+    "catppuccin/nvim",
     lazy = false,
     name = "catppuccin",
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'catppuccin-macchiato'
-    end,
   },
   {
     -- Set lualine as statusline
@@ -353,6 +356,8 @@ require('lazy').setup({
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 
+vim.cmd.colorscheme 'tokyonight'
+
 vim.o.scrolloff = 6
 
 -- Set highlight on search
@@ -366,6 +371,9 @@ vim.wo.relativenumber = true
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
+
+-- set diffopt+=vertical
+vim.opt.diffopt = vim.opt.diffopt + "vertical"
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
@@ -411,7 +419,7 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- git commit message
-vim.keymap.set('n', '<leader>gcm', '4jwwwyWggpA<CR><CR><Esc>p^wwwDgg0d4w:s/-/ /g<CR>', { desc = '[G]it [C]ommit [M]essage fix' })
+vim.keymap.set('n', '<leader>gcm', '4jwwwyWggpA<CR><CR><Esc>p^wwwDgg0d4w:s/-/ /g<CR>~h', { desc = '[G]it [C]ommit [M]essage fix' })
 
 -- easy system clipboard copy/paste
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')

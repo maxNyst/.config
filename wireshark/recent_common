@@ -1,0 +1,118 @@
+# Common recent settings file for Wireshark 4.2.5.
+#
+# This file is regenerated each time Wireshark is quit
+# and when changing configuration profile.
+# So be careful, if you want to make manual changes here.
+
+######## Recent capture files (latest last), cannot be altered through command line ########
+
+
+######## Recent capture filters (latest first), cannot be altered through command line ########
+
+
+######## Recent display filters (latest last), cannot be altered through command line ########
+
+recent.display_filter: _ws.col.protocol == "TLSv1.3"
+recent.display_filter: _ws.col.protocol != "ESP"
+recent.display_filter: _ws.col.protocol == "SMPP"
+recent.display_filter: _ws.col.protocol == "TCP"
+recent.display_filter: (ip.dst == 52.123.159.175) || (ip.src == 52.123.159.175) || (ip.src == 90.131.17.133) || (ip.dst == 90.131.17.133)
+recent.display_filter: ip.dst == 52.123.159.175
+recent.display_filter: (ip.src == 90.131.17.133) || (ip.dst == 90.131.17.133)
+recent.display_filter: (ip.src == 10.218.46.16) && (ip.dst == 213.50.81.222)
+recent.display_filter: ip.src == 10.218.46.16
+recent.display_filter: _ws.col.info == "62129 → 443 [ACK] Seq=32 Ack=32 Win=2047 Len=0 TSval=763675853 TSecr=271965320"
+
+# Main window geometry.
+# Decimal numbers.
+gui.geometry_main_x: 560
+gui.geometry_main_y: 295
+gui.geometry_main_width: 1440
+gui.geometry_main_height: 847
+
+# Main window maximized.
+# TRUE or FALSE (case-insensitive).
+gui.geometry_main_maximized: FALSE
+
+# Leftalign Action Buttons.
+# TRUE or FALSE (case-insensitive).
+gui.geometry_leftalign_actions: FALSE
+
+# Last used Configuration Profile.
+gui.last_used_profile: Default
+
+# WLAN statistics upper pane size.
+# Decimal number.
+gui.geometry_status_wlan_stats_pane: 200
+
+# Warn if running with elevated permissions (e.g. as root).
+# TRUE or FALSE (case-insensitive).
+privs.warn_if_elevated: TRUE
+
+# Warn if Wireshark is unable to capture.
+# TRUE or FALSE (case-insensitive).
+sys.warn_if_no_capture: TRUE
+
+# Find packet search in.
+# One of: PACKET_LIST, PACKET_DETAILS, PACKET_BYTES
+gui.search_in: PACKET_LIST
+
+# Find packet character set.
+# One of: NARROW_AND_WIDE, NARROW, WIDE
+gui.search_char_set: NARROW_AND_WIDE
+
+# Find packet case sensitive search.
+# TRUE or FALSE (case-insensitive).
+gui.search_case_sensitive: FALSE
+
+# Find packet search type.
+# One of: DISPLAY_FILTER, HEX_VALUE, STRING, REGEX
+gui.search_type: DISPLAY_FILTER
+
+# Geometry and maximized state of ExpertInfoDialog window.
+# Decimal integers.
+gui.geom.ExpertInfoDialog.x: 391
+gui.geom.ExpertInfoDialog.y: 58
+gui.geom.ExpertInfoDialog.width: 864
+gui.geom.ExpertInfoDialog.height: 847
+# TRUE or FALSE (case-insensitive).
+gui.geom.ExpertInfoDialog.maximized: FALSE
+
+# Geometry and maximized state of PacketDialog window.
+# Decimal integers.
+gui.geom.PacketDialog.x: 152
+gui.geom.PacketDialog.y: 141
+gui.geom.PacketDialog.width: 1152
+gui.geom.PacketDialog.height: 677
+# TRUE or FALSE (case-insensitive).
+gui.geom.PacketDialog.maximized: FALSE
+
+# Geometry and maximized state of PreferencesDialog window.
+# Decimal integers.
+gui.geom.PreferencesDialog.x: 776
+gui.geom.PreferencesDialog.y: 325
+gui.geom.PreferencesDialog.width: 777
+gui.geom.PreferencesDialog.height: 554
+# TRUE or FALSE (case-insensitive).
+gui.geom.PreferencesDialog.maximized: FALSE
+
+# Geometry and maximized state of ESP SAs window.
+# Decimal integers.
+gui.geom.ESP SAs.x: 870
+gui.geom.ESP SAs.y: 389
+gui.geom.ESP SAs.width: 566
+gui.geom.ESP SAs.height: 403
+# TRUE or FALSE (case-insensitive).
+gui.geom.ESP SAs.maximized: FALSE
+
+# Custom colors.
+# List of custom colors selected in Qt color picker.
+gui.custom_colors: 
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff"

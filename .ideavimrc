@@ -14,11 +14,16 @@ set showmode
 set incsearch
 set scrolloff=6
 
+" consistent capital movement with yank as well
+noremap Y y$
+
 " easy system clipboard copy/paste
 noremap <leader>y "+y
-noremap <leader>Y "+Y
+noremap <leader>Y "+y$
 noremap <leader>p "+p
 noremap <leader>P "+P
+noremap <leader>d "+d
+noremap <leader>D "+D
 
 " easy window hopping
 noremap <C-h> <C-w>h
@@ -53,6 +58,8 @@ let g:highlightedyank_highlight_color = 'rgba(160, 160, 160, 155)'
 map <leader>mr <Action>(Maven.Reimport)
 
 " ideavim specific
+map <C-i> <Action>(Forward)
+map <C-o> <Action>(Back)
 map <leader>va <Action>(VimFindActionIdAction)
 map <leader>vr <Action>(IdeaVim.ReloadVimRc.reload)
 map <leader>vs :vs ~/.ideavimrc<CR>
@@ -64,11 +71,11 @@ map <leader>sf <Action>(SelectInProjectView)
 map <leader>r <Action>(Run)
 
 " debugger mappings
-map <leader>d <Action>(Debug)
-map <leader>dr <Action>(Resume)
-map <leader>ds <Action>(StepOver)
-map <leader>di <Action>(StepInto)
-map <leader>do <Action>(StepOut)
+" map <leader>d <Action>(Debug)
+" map <leader>dr <Action>(Resume)
+" map <leader>ds <Action>(StepOver)
+" map <leader>di <Action>(StepInto)
+" map <leader>do <Action>(StepOut)
 map <leader>mb <Action>(XDebugger.MuteBreakpoints)
 map <leader>b <Action>(ToggleLineBreakpoint)
 
@@ -92,6 +99,10 @@ map gD <Action>(GotoTypeDeclaration)
 map gI <Action>(GotoImplementation)
 map gb <Action>(CommentByBlockComment)
 map <leader>ge <Action>(GotoNextError)
+
+map <leader>k <Action>(Vcs.ShowHistoryForBlock)
+map <leader>u <Action>(Vcs.RollbackChangedLines)
+
 
 " move code up and down NEEDS FIX
 map <D-j> <Action>(MoveStatementDown)
