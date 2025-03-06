@@ -1,0 +1,14 @@
+[user]
+	email = max.nystrom@tele2.com
+	name = Max Nystrom
+[core]
+	pager = less -FXR
+	editor = nvim
+[commit]
+	verbose = true
+[rerere]
+	enabled = true
+[merge]
+	tool = nvimdiff2
+[mergetool]
+	keepBackup = false
